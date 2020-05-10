@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ximen.plan.mapper.SysUserMapper">
+    <select id="findById" resultType="com.ximen.plan.entity.SysUser">
+        select
+            sys_user.user_id,
+            sys_user.username,
+            sys_user.email,
+            sys_user.mobile,
+            sys_user.status,
+            sys_user.sex,
+            GROUP_CONCAT(sys_user_role.role_id) roleId
+        from
+            sys_user
+        left join
+            sys_user_role on sys_user.user_id = sys_user_role.user_id
+        where
+            sys_user.user_id = #{id}
+    </select>
+
+    <resultMap id="UserInfo" autoMapping="true" type="com.ximen.plan.entity.SysUser">
+        <id property="userId" column="user_id"/>
+        <collection property="roles" javaType="list">
+            <result column="role_name"/>
+        </collection>
+        <collection property="permissions" javaType="list">
+            <result column="permission_name"/>
+        </collection>
+    </resultMap>
+    <select id="getUserInfo" resultMap="UserInfo">
+        select
+            u.user_id user_id,
+            u.username username,
+            u.email email,
+            u.mobile mobile,
+            u.status status,
+            u.sex sex,
+            u.description description,
+            u.avatar avatar,
+            sr.role_name role_name,
+            sp.permission_name permission_name
+        from
+            sys_user u
+        left join
+            sys_user_role sur on sur.user_id = u.user_id
+        left join
+            sys_role sr on sr.role_id = sur.role_id
+        left join
+            sys_role_permission srp on srp.role_id = sr.role_id
+        left join
+            sys_permission sp on sp.id = srp.permission_id
+        where
+            u.user_id = #{userId}
+    </select>
+</mapper>

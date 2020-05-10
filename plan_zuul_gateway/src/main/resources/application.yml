@@ -1,0 +1,31 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: ximenplan-zuul-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/ # Eureka客户端与Eureka服务端进行交互的地址
+  instance:
+    instance-id: gateway-10000 # Eureka Status名称
+    prefer-ip-address: true
+
+info:
+  app.name: ximenplan-zuul-gateway
+  company.name: www.ximen.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+zuul:
+  ignored-services: '*' #让原始的微服务名称不可访问
+  prefix: /plan  #统一前缀
+  routes:
+    #可以随便写，在zuul上面唯一即可；当这里的值 = com.ximen.plan.service-id时，com.ximen.plan.service-id可以不写。
+    plan-system: #基础
+      #想要映射到的路径，配置请求URL的请求规则
+      path: /system/**
+      #Eureka中的serviceId,指定Eureka注册中心中的服务id
+      serviceId: plan-system #指定Eureka注册中心中的服务id
+jwt:
+  config:
+    key: ximen

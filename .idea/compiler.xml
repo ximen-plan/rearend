@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="plan_zuul_gateway" />
+        <module name="plan_common" />
+        <module name="plan_system" />
+        <module name="plan_eureka" />
+        <module name="plan_generatecode" />
+        <module name="plan_system_shiro" />
+        <module name="plan_monitor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="plan_api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="plan_api" options="-parameters" />
+      <module name="plan_common" options="" />
+      <module name="plan_eureka" options="" />
+      <module name="plan_generatecode" options="-parameters" />
+      <module name="plan_monitor" options="" />
+      <module name="plan_system" options="" />
+      <module name="plan_zuul_gateway" options="" />
+    </option>
+  </component>
+</project>
