@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="plan_zuul_gateway" />
+        <module name="plan_chat" />
         <module name="plan_common" />
         <module name="plan_system" />
         <module name="plan_eureka" />
         <module name="plan_generatecode" />
         <module name="plan_system_shiro" />
+        <module name="plan_gateway" />
         <module name="plan_monitor" />
       </profile>
     </annotationProcessing>

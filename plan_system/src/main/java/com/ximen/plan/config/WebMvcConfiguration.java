@@ -2,14 +2,13 @@ package com.ximen.plan.config;
 
 import com.ximen.plan.web.interceptor.JwtInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
  * WebMvc配置类
  */
-@Configuration
+//@Configuration
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
     //注入JwtInterceptor

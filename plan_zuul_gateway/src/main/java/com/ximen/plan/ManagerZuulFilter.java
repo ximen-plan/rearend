@@ -46,6 +46,15 @@ public class ManagerZuulFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
         String authorizationHeader = request.getHeader("Authorization");
 
+        String upgradeHeader = request.getHeader("Upgrade");
+        if (null == upgradeHeader) {
+            upgradeHeader = request.getHeader("upgrade");
+        }
+        if (null != upgradeHeader && "websocket".equalsIgnoreCase(upgradeHeader)) {
+            requestContext.addZuulRequestHeader("connection", "Upgrade");
+            return null;
+        }
+
         //2. 其他请求处理
         //1）处理CORS跨域请求，因为跨域请求的第一次请求是预请求，不带头信息的，因此要过滤掉。
         if (request.getMethod().equals("OPTIONS")) {

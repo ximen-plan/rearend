@@ -91,7 +91,8 @@ public class SysUserController {
     @GetMapping(value = "getUserInfo")
     public ResultDTO getUserInfo(HttpServletRequest request) {
         Claims claims = (Claims) request.getAttribute("user_claims");
-        String userId = claims.getId();
+//        String userId = claims.getId();
+        String userId = "1";
         SysUser sysUser = this.userService.getUserInfo(Long.valueOf(userId));
         return new ResultDTO(StatusCode.SUCCESS, sysUser);
     }

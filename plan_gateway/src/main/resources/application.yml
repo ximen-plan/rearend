@@ -1,0 +1,27 @@
+server.port: 10000
+
+spring:
+  application:
+    name: plan-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: system
+          uri: lb://PLAN-SYSTEM
+          predicates:
+            - Path=/plan/system/**
+          filters:
+            - StripPrefix=2
+        - id: chat
+          uri: lb://PLAN-CHAT
+          predicates:
+            - Path=/plan/chat/**
+          filters:
+            - StripPrefix=2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/ # Eureka客户端与Eureka服务端进行交互的地址
+  instance:
+    instance-id: gateway-10000 # Eureka Status名称
+    prefer-ip-address: true

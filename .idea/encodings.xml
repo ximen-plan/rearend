@@ -2,10 +2,12 @@
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plan_chat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plan_gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_generatecode" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_generatecode/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plan_monitor" charset="UTF-8" />
