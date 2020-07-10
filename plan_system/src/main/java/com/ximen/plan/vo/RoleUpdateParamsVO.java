@@ -1,4 +1,4 @@
-package com.ximen.plan.VO;
+package com.ximen.plan.vo;
 
 import com.ximen.plan.entity.SysRole;
 import lombok.AllArgsConstructor;

@@ -12,6 +12,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -25,7 +26,7 @@ import java.util.stream.Collectors;
 public class SysUserController {
 
     @Autowired
-    private SysUserService userService;
+    private SysUserService sysUserService;
 
     @Autowired
     private SysUserRoleService sysUserRoleService;
@@ -57,7 +58,7 @@ public class SysUserController {
         List<SysRole> roles = null;
         //权限集合
         List<SysPermission> permissions = null;
-        SysUser user = userService.findUserByLoginnameAndPassword(sysUser.getUsername(), sysUser.getPassword());
+        SysUser user = sysUserService.findUserByLoginnameAndPassword(sysUser.getUsername(), sysUser.getPassword());
         //1.获取用户角色
         List<SysUserRole> userRoles = sysUserRoleService.findByUserId(user.getUserId());
         if (!CollectionUtils.isEmpty(userRoles)) {
@@ -93,7 +94,7 @@ public class SysUserController {
         Claims claims = (Claims) request.getAttribute("user_claims");
 //        String userId = claims.getId();
         String userId = "1";
-        SysUser sysUser = this.userService.getUserInfo(Long.valueOf(userId));
+        SysUser sysUser = this.sysUserService.getUserInfo(Long.valueOf(userId));
         return new ResultDTO(StatusCode.SUCCESS, sysUser);
     }
 
@@ -112,7 +113,7 @@ public class SysUserController {
                           @PathVariable("pageNumber") Integer pageNumber,
                           @PathVariable("pageSize") Integer pageSize) {
 
-        PageResultDTO pageResult = this.userService.page(pageNumber, pageSize, searchKey);
+        PageResultDTO pageResult = this.sysUserService.page(pageNumber, pageSize, searchKey);
         return new ResultDTO(StatusCode.SUCCESS, pageResult);
     }
 
@@ -124,19 +125,19 @@ public class SysUserController {
      */
     @PostMapping(value = "add", name = "user:list")
     public ResultDTO add(@RequestBody SysUser user) {
-        userService.add(user);
+        sysUserService.add(user);
         return new ResultDTO(StatusCode.SUCCESS);
     }
 
     @PutMapping("update")
     public ResultDTO update(@RequestBody SysUser user) {
-        userService.update(user);
+        sysUserService.update(user);
         return new ResultDTO(StatusCode.SUCCESS);
     }
 
     @GetMapping("findById/{id}")
     public ResultDTO findById(@PathVariable Integer id) {
-        return new ResultDTO(StatusCode.SUCCESS, userService.findById(id));
+        return new ResultDTO(StatusCode.SUCCESS, sysUserService.findById(id));
     }
 
     /**
@@ -155,5 +156,15 @@ public class SysUserController {
 //        List<VueRouter<SysPermission>> userRouters = sysPermissionService.getUserRouters(userId);
         Object object = sysPermissionService.getUserRouters(userId);
         return new ResultDTO(StatusCode.SUCCESS, object);
+    }
+
+    /**
+     * 导出用户信息
+     *
+     * @return
+     */
+    @GetMapping("exportUserInfo")
+    public void exportUserInfo(HttpServletRequest request, HttpServletResponse response) {
+        this.sysUserService.exportUserInfo(request, response);
     }
 }

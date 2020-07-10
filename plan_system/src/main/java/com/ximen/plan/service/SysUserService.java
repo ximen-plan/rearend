@@ -12,7 +12,11 @@ import com.ximen.plan.entity.*;
 import com.ximen.plan.exception.ApiException;
 import com.ximen.plan.mapper.SysUserMapper;
 import com.ximen.plan.mapper.SysUserRoleMapper;
+import com.ximen.plan.utils.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,8 +24,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 /**
  * @author ZhiShun.Cai
@@ -196,5 +209,120 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
             }
         }
         return sysUser;
+    }
+
+    /**
+     * 导出用户信息
+     *
+     * @param request
+     * @param response
+     */
+    public void exportUserInfo(HttpServletRequest request, HttpServletResponse response) {
+        ServletOutputStream sos = null;
+        ZipOutputStream zos = null;
+        FileInputStream fis = null;
+        ByteArrayOutputStream baos = null;
+        try {
+            sos = response.getOutputStream();
+            zos = new ZipOutputStream(sos);
+            //1.设置响应头信息
+            this.setResponseHeaderInfo(request, response);
+            //2.获取需导出的数据
+            List<SysUser> users = this.sysUserMapper.selectList(null);
+            //3.设置数据
+            for (SysUser user : users) {
+                //读取模板
+                baos = new ByteArrayOutputStream();
+                fis = new FileInputStream("c:\\user.xlsx");
+                //设置数据
+                this.setDatas(user, baos, fis);
+                //添加到zipStream
+                this.compressFileToZipStream(zos, baos, user.getUsername() + ".xlsx");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (sos != null) {
+                    sos.close();
+                }
+                if (zos != null) {
+                    zos.close();
+                }
+                if (fis != null) {
+                    fis.close();
+                }
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    /**
+     * 设置Excel数据
+     */
+    private void setDatas(SysUser user, ByteArrayOutputStream baos, FileInputStream fis) throws Exception {
+        XSSFRow row = null;
+        //1.创建wb
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+        //2.获取sheet
+        XSSFSheet sheet = wb.getSheet("user");
+        row = sheet.createRow(1);
+        row.createCell(0).setCellValue(1);
+        row.createCell(1).setCellValue(user.getUsername());
+        row.createCell(2).setCellValue(user.getEmail());
+        row.createCell(3).setCellValue(user.getStatus() == 0 ? "未激活" : "激活");
+        row.createCell(3).setCellValue(user.getCreateTime());
+        wb.write(baos);
+    }
+
+    /**
+     * file to zipstream
+     *
+     * @param zos
+     * @param baos
+     * @param excelName
+     */
+    private void compressFileToZipStream(ZipOutputStream zos, ByteArrayOutputStream baos, String excelName) throws Exception {
+        byte[] buf = new byte[1024];
+        ByteArrayInputStream is = null;
+        BufferedInputStream bis = null;
+        // Compress the files
+        byte[] content = baos.toByteArray();
+        is = new ByteArrayInputStream(content);
+        bis = new BufferedInputStream(is);
+        // Add ZIP entry to output stream.
+        zos.putNextEntry(new ZipEntry(excelName));
+        // Transfer bytes from the file to the ZIP file
+        int len;
+        while ((len = bis.read(buf)) > 0) {
+            zos.write(buf, 0, len);
+        }
+    }
+
+    /**
+     * 设置响应头信息
+     *
+     * @param response
+     */
+    private void setResponseHeaderInfo(HttpServletRequest request, HttpServletResponse response) {
+        try {
+
+//            String agent = request.getHeader("User-Agent");
+//            String excelExportName = FileUtils.encodeDownloadFilename("用户信息.xlsx", agent);
+//            response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+//            response.setHeader("file-name", excelExportName);
+//            response.setHeader("Access-Control-Expose-Headers", "file-name");
+//            response.setHeader("content-disposition", "attachment;filename=" + excelExportName);
+            String agent = request.getHeader("User-Agent");
+            String zipName = FileUtils.encodeDownloadFilename("用户信息.zip", agent);
+            response.setContentType("application/zip");
+            response.setHeader("file-name", zipName);
+            response.setHeader("Access-Control-Expose-Headers", "file-name");
+            response.setHeader("content-disposition", "attachment;filename=" + zipName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

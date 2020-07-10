@@ -2,45 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e149baf-8bc5-4142-83d0-2ca18019f888" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/plan_chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/src/main/java/com/ximen/plan/ChatApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/src/main/java/com/ximen/plan/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/src/main/java/com/ximen/plan/socket/OnlineUserSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_chat/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_gateway/src/main/java/com/ximen/plan/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_gateway/src/main/java/com/ximen/plan/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/socket/OnlineUserSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73c77c8b-c216-4334-bd01-4e8fe7802436.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73c77c8b-c216-4334-bd01-4e8fe7802436.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_common/plan_common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_common/src/main/java/com/ximen/plan/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_eureka/plan_eureka.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_gateway/plan_gateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_system/plan_system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan_system/src/main/resources/users.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plan_eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_eureka/target/classes/com/ximen/plan/EurekaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_eureka/target/classes/com/ximen/plan/EurekaApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/VO/RoleUpdateParamsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/vo/RoleUpdateParamsVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/web/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/web/controller/SysRoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/web/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/src/main/java/com/ximen/plan/web/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/SystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/SystemApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/VO/RoleUpdateParamsVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/VO/RoleUpdateParamsVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/config/WebMvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/config/WebMvcConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysPermission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysRolePermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysRolePermission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysUserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/SysUserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/router/RouterMeta.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/entity/router/RouterMeta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/service/SysRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/service/SysRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/service/SysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/service/SysUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/web/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/web/controller/SysRoleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/web/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_system/target/classes/com/ximen/plan/web/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_zuul_gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plan_zuul_gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_zuul_gateway/src/main/java/com/ximen/plan/ManagerZuulFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_zuul_gateway/src/main/java/com/ximen/plan/ManagerZuulFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_zuul_gateway/src/main/java/com/ximen/plan/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/plan_zuul_gateway/src/main/java/com/ximen/plan/ZuulApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_zuul_gateway/target/classes/com/ximen/plan/ManagerZuulFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_zuul_gateway/target/classes/com/ximen/plan/ManagerZuulFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan_zuul_gateway/target/classes/com/ximen/plan/ZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/plan_zuul_gateway/target/classes/com/ximen/plan/ZuulApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +126,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/plan_chat/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/plan_system/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -164,29 +146,29 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system\src\main\resources\mybatis\mappers" />
-      <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system\src\main\java\com\ximen\plan\mapper" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ximen.plan" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ximen.plan.socket" />
-      <recent name="com.ximen.plan.config" />
-      <recent name="com.ximen.plan.service" />
-      <recent name="com.ximen.plan.mapper" />
-      <recent name="com.ximen.plan.entity" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\西门小狼狗\5.MyGitHub\rearend\plan_system\src\main\resources" />
       <recent name="D:\西门小狼狗\5.MyGitHub\rearend\plan_chat\src\main\resources" />
       <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_common\src\main\java\com\ximen\plan\entiry\system" />
       <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_common\src\main\java\com\ximen\plan" />
       <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system_shiro\src\main\resources" />
-      <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system_shiro\src\main\java\com\ximen\plan" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ximen.plan.utils" />
+      <recent name="com.ximen.plan.socket" />
+      <recent name="com.ximen.plan.config" />
+      <recent name="com.ximen.plan.service" />
+      <recent name="com.ximen.plan.mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system\src\main\resources\mybatis\mappers" />
+      <recent name="D:\西门小狼狗\3.项目\ximen-plan\plan_parent\plan_system\src\main\java\com\ximen\plan\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ChatApplication">
+  <component name="RunManager" selected="Spring Boot.SystemApplication">
     <configuration name="ChatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="plan_chat" />
       <extension name="coverage">
@@ -259,9 +241,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ChatApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.ChatApplication" />
         <item itemvalue="Spring Boot.SystemShiroApplication" />
         <item itemvalue="Spring Boot.ZuulApplication" />
       </list>
@@ -287,7 +269,10 @@
       <workItem from="1584084321106" duration="37000" />
       <workItem from="1588182857892" duration="1023000" />
       <workItem from="1589885989304" duration="9430000" />
-      <workItem from="1590388446532" duration="4466000" />
+      <workItem from="1590388446532" duration="5116000" />
+      <workItem from="1591163292082" duration="21000" />
+      <workItem from="1593329982002" duration="12403000" />
+      <workItem from="1593354908339" duration="1161000" />
     </task>
     <servers />
   </component>
@@ -299,65 +284,77 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588182986305" />
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1590394562751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562751" />
+    <state width="1877" height="103" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898241" />
-    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1590394562751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562751" />
+    <state width="1877" height="103" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898241" />
-    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1590394562751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562751" />
+    <state width="1877" height="103" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898241" />
-    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1590394562751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562751" />
+    <state width="1877" height="103" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898241" />
-    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1590394562475">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.1.bottom" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562475" />
+    <state width="1877" height="103" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1590394562475">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.1.center" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562475" />
+    <state width="1877" height="103" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1590394562475">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.1.left" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562475" />
+    <state width="1877" height="103" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1590394562475">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.1.right" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562475" />
+    <state width="1877" height="103" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.2.bottom" timestamp="1590394562476">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.2.bottom" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562476" />
+    <state width="1877" height="103" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.2.center" timestamp="1590394562476">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.2.center" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562476" />
+    <state width="1877" height="103" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.2.left" timestamp="1590394562476">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.2.left" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562476" />
+    <state width="1877" height="103" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
-    <state width="1877" height="240" key="GridCell.Tab.2.right" timestamp="1590394562476">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="2" key="GridCell.Tab.2.right" timestamp="1593344364941">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590394562476" />
+    <state width="1877" height="103" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590395717592" />
+    <state width="1877" height="2" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593344364941" />
     <state width="1877" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589899898013" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1588182948262">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -367,10 +364,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588182858357" />
-    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1589898138489">
+    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1591163303898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583997176615" />
+    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1591163303898" />
     <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589898138489" />
     <state x="334" y="214" key="new project wizard" timestamp="1590388543646">
       <screen x="0" y="0" width="1920" height="1040" />

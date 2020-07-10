@@ -25,6 +25,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         registry.addInterceptor(jwtInterceptor)
                 //添加需要拦截器拦截的资源
                 .addPathPatterns("/**")
-                .excludePathPatterns("/**/login");
+                .excludePathPatterns("/**/login", "/**/exportUserInfo");
     }
 }
